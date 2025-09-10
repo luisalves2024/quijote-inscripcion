@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscripción Quijote Day</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #2d2d2d;
+      --accent: #b32424;
+      --input-bg: rgba(255,255,255,0.93);
+      --border-radius: 10px;
+      --box-shadow: 0 6px 32px rgba(44,44,44,0.10);
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      color: var(--primary);
+      min-height: 100vh;
+      position: relative;
+      background: transparent;
+      overflow-x: hidden;
+    }
+    /* Fondo difuminado */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100vw; height: 100vh;
+      z-index: -1;
+      background: url('fondo-quijote.jpg') center center / cover no-repeat;
+      filter: blur(14px) brightness(0.93);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 440px;
+      margin: 56px auto 32px auto;
+      background: var(--input-bg);
+      padding: 40px 36px 34px 36px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      border: 1px solid #e8e0d0;
+      backdrop-filter: blur(2.5px);
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .logo img {
+      height: 200px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(44,44,44,0.10));
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 0.2em;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--primary);
+      text-shadow: 0 1px 4px #eee;
+    }
+    .descripcion {
+      text-align: center;
+      font-size: 1.13em;
+      color: #6b4d23;
+      margin-bottom: 18px;
+      font-style: italic;
+      font-weight: 400;
+      text-shadow: 0 1px 2px #f7eddc;
+    }
+    .evento-detalles {
+      background: #f9f4ed;
+      padding: 16px;
+      border-radius: var(--border-radius);
+      margin-bottom: 26px;
+      font-size: 1.05em;
+      color: #3f2c10;
+      box-shadow: 0 1px 6px rgba(44,44,44,0.04);
+      border: 1px solid #ecd6b6;
+    }
+    .evento-detalles b, .evento-detalles strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+    h2 {
+      text-align: left;
+      font-size: 1.20em;
+      font-weight: 600;
+      margin: 0 0 14px 0;
+      color: var(--primary);
+      letter-spacing: 0.01em;
+      text-shadow: 0 1px 2px #f7eddc;
+    }
+    form {
+      margin-top: 8px;
+    }
+    label {
+      display: block;
+      margin-top: 14px;
+      font-weight: 500;
+      font-size: 1em;
+      color: #3f2c10;
+      text-shadow: 0 1px 2px #f7eddc;
+    }
+    input {
+      width: 100%;
+      padding: 11px 13px;
+      margin-top: 7px;
+      border: 1px solid #dac6a8;
+      border-radius: 7px;
+      background: #faf7f3;
+      font-size: 1em;
+      transition: border-color 0.2s;
+      box-shadow: 0 1px 3px #f0e8d9;
+    }
+    input:focus {
+      border-color: var(--accent);
+      outline: none;
+    }
+    button {
+      margin-top: 24px;
+      width: 100%;
+      padding: 13px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      font-size: 1.15em;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 2px 12px rgba(44,44,44,0.08);
+      transition: background 0.2s;
+      letter-spacing: 0.01em;
+    }
+    button:hover, button:focus {
+      background: #8c1919;
+    }
+    .success {
+      color: var(--accent);
+      text-align: center;
+      margin-top: 17px;
+      font-size: 1.10em;
+      font-weight: 500;
+      display: none;
+      text-shadow: 0 1px 2px #f7eddc;
+    }
+    @media (max-width: 550px) {
+      .container {
+        max-width: 98vw;
+        padding: 18px 6vw 14px 6vw;
+      }
+      .logo img {
+        height: 88px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="logo-quijote-day.png" alt="Quijote Day Logo">
+    </div>
+    <h1>Quijote Day</h1>
+    <div class="descripcion">Una experiencia única</div>
+    <div class="evento-detalles">
+      <strong>Detalles del Evento</strong><br>
+      Únase a nosotros en una experiencia que combina <b>Inteligencia Artificial</b>, <b>Innovación Disruptiva</b> y el mejor vino en la tierra de Don Quijote.<br><br>
+      <b>Fecha:</b> 9 de octubre 2025<br>
+      <b>Lugar:</b> El Toboso / Toledo<br>
+      <b>Salida Bus:</b> 16.00<br>
+      <b>Dirección:</b> Paseo de la Castellana 95, Torre Europa, Madrid
+    </div>
+    <h2>Formulario de Inscripción</h2>
+    <form id="formulario" action="https://formspree.io/f/mjkeleyy" method="POST" autocomplete="off">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="empresa">Empresa</label>
+      <input type="text" id="empresa" name="empresa" required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="teléfono" required>
+
+      <button type="submit">Inscribirse</button>
+      <div class="success" id="successMsg">¡Inscripción enviada!</div>
+    </form>
+  </div>
+  <script>
+    // Mostrar mensaje de éxito al enviar el formulario
+    document.getElementById('formulario').addEventListener('submit', function(e) {
+      var msg = document.getElementById('successMsg');
+      setTimeout(function() {
+        msg.style.display = 'block';
+      }, 500);
+    });
+  </script>
+</body>
+</html>
